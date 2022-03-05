@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 下面的代卖虽然好，但是使用的 是 default constructor, 但是我们想使用的 是我们自己的constructor-->
+    <bean id="apple1" class="com.example.demo.Entity.Apple">
+        <property name="name" value="Shandong"/>
+    </bean>
+
+    <!-- 下面的的是使用 applu 里面的 constructor 来创建 bean 的对象-->
+    <bean id="apple2" class="com.example.demo.Entity.Apple">
+        <constructor-arg name="name" value="南京"/>
+        <constructor-arg name="price" value="19.0"/>
+    </bean>
+
+
+</beans>
