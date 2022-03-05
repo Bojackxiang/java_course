@@ -2,7 +2,6 @@ package com.example.demo;
 
 import com.example.demo.Entity.Apple;
 import com.example.demo.Entity.Child;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,7 +18,9 @@ public class DemoApplication {
 				// classpath 这个东西实际上叫做路径表达式
 				// 这个类路径实际上就是 target 里面的 class 里面的东西
 				// /Users/weijiexiang/code/idea/demo/target/classes
-				new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+//				new ClassPathXmlApplicationContext("classpath:applicationContext-demo1.xml");
+				new ClassPathXmlApplicationContext("classpath:applicationContext-*.xml");
+
 		Apple apple1 = applicationContext.getBean("apple1", Apple.class);
 		System.out.println(apple1.toString());
 
@@ -28,6 +29,13 @@ public class DemoApplication {
 
 		Child child1 = applicationContext.getBean("child1", Child.class);
 		System.out.println(child1);
+
+		// 查看容器里面到底有多少 Bean
+		String[] nameList = applicationContext.getBeanDefinitionNames();
+		for (String beanName: nameList){
+			System.out.println("--------------------");
+			System.out.println(beanName);
+		}
 	}
 
 

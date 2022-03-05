@@ -12,7 +12,9 @@
         <property name="name" value="Shandong"/>
     </bean>
 
-    <!-- 下面的的是使用 applu 里面的 constructor 来创建 bean 的对象-->
+    <!--    下面的的是使用 applu 里面的 constructor 来创建 bean 的对象-->
+    <!--    不仅能够在当前的 xml 下面获取，也可以在 不同的xml 西面获取 id ，只要 classpath 配置的正确-->
+    <!--    比如说classpath:applicationContext-*.xml，就在查找所有的 xml 文件 -->
     <bean id="apple2" class="com.example.demo.Entity.Apple">
         <constructor-arg name="name" value="南京"/>
         <constructor-arg name="price" value="19.0"/>
