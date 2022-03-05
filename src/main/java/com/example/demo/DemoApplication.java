@@ -15,7 +15,9 @@ public class DemoApplication {
 
 		// 下面是我的代码
 		ApplicationContext applicationContext =
-				// classpath 指向resource 里面的资源
+				// classpath 这个东西实际上叫做路径表达式
+				// 这个类路径实际上就是 target 里面的 class 里面的东西
+				// /Users/weijiexiang/code/idea/demo/target/classes
 				new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 		Apple apple1 = applicationContext.getBean("apple1", Apple.class);
 		System.out.println(apple1.toString());
