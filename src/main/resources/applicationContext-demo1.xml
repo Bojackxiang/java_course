@@ -28,5 +28,17 @@
         <constructor-arg name="apple" ref="apple1"/>
     </bean>
 
+<!--    关于 scope 属性-->
+<!--        prototype: -->
+<!--            如果是 prototype：不调用get bean，是不会生成的对象的-->
+<!--            只会在 getBean 或者 注入的时候才会创建-->
+
+<!--        singleton-->
+<!--            默认的 -->
+<!--            容器起来的时候就会立刻别创建 -->
+
+
+
+
 
 </beans>
