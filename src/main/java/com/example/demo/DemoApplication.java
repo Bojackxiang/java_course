@@ -34,7 +34,11 @@ public class DemoApplication {
 		String[] nameList = applicationContext.getBeanDefinitionNames();
 		for (String beanName: nameList){
 			System.out.println("--------------------");
-			System.out.println(beanName);
+//			System.out.println(beanName);
+//			获取 bean 的类型
+			String beanClass = applicationContext.getBean(beanName).getClass().toString();
+			System.out.println(beanClass);
+
 		}
 	}
 
