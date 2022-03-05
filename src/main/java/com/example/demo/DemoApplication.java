@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.Entity.Apple;
+import com.example.demo.Entity.Child;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -24,6 +25,9 @@ public class DemoApplication {
 
 		Apple apple2 = applicationContext.getBean("apple2", Apple.class);
 		System.out.println(apple2.toString());
+
+		Child child1 = applicationContext.getBean("child1", Child.class);
+		System.out.println(child1);
 	}
 
 

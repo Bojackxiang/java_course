@@ -19,4 +19,12 @@
     </bean>
 
 
+    <!--    下面的是依赖注入-->
+    <!--    alex 要吃苹果，所以需要注入(说明)前面的是哪一个苹果-->
+    <bean id="child1" class="com.example.demo.Entity.Child">
+        <constructor-arg name="name" value="alex"/>
+        <constructor-arg name="apple" ref="apple1"/>
+    </bean>
+
+
 </beans>
